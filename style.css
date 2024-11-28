@@ -1,0 +1,1179 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+/* navigation style */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100vw;
+}
+nav {
+  height: 8vh;
+  user-select: none;
+}
+.nav-brand {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  font-family: "comfortaa";
+  user-select: none;
+}
+.nav-lin {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: "comfortaa";
+  margin-right: 40px;
+  transition: all 0.5s linear;
+  display: block;
+}
+.nav-lin::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: white;
+  position: relative;
+  bottom: 0;
+  display: block;
+  transition: all 0.5s linear;
+}
+.nav-lin:hover::after {
+  width: 100%;
+}
+/* section 1 style */
+#section1 {
+  max-height: 50vh;
+  height: 100%;
+  width: 100%;
+  margin-top: 8vh;
+}
+.title-header {
+  text-align: end;
+  margin-bottom: 10vh;
+}
+.title-header .title-primary::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 76.5rem;
+  height: 3px;
+  width: 0;
+  background-color: white;
+  transition: all 0.5s linear;
+  animation: underlineEffect 5s infinite;
+}
+
+/* Keyframes untuk animasi */
+@keyframes underlineEffect {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 15%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.title-header .title-secondary::after {
+  content: "";
+  position: absolute;
+  top: 95px;
+  left: 65rem;
+  height: 3px;
+  width: 50%;
+  background-color: white;
+  transition: all 0.5s linear;
+  animation: underlineEfek 5s infinite;
+}
+@keyframes underlineEfek {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 25.5%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.title-header .title-primary {
+  font-family: "comfortaa";
+  font-size: 40px;
+  color: white;
+}
+.title-header .title-secondary {
+  font-family: "comfortaa";
+  font-size: 35px;
+  color: white;
+}
+.title-about {
+  padding-top: 2vh;
+}
+.title-about .title-primary {
+  font-family: "comfortaa";
+  font-size: 33px;
+  color: white;
+  margin-left: 0.6rem;
+}
+.title-about .title-secondary {
+  font-family: "comfortaa";
+  font-size: 28px;
+  color: white;
+  margin-left: 0.5rem;
+}
+.description p {
+  font-family: "poppins";
+  font-size: 20px;
+  color: white;
+  text-align: justify;
+}
+.aboutImg {
+  width: 15vw;
+  position: relative;
+  top: -3rem;
+  right: -18rem;
+}
+.aboutImg img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  transition: 0.5s linear;
+}
+.aboutImg img:hover {
+  filter: brightness(80%);
+}
+
+/* section 2 style */
+#section2 {
+  margin-top: 21vh;
+  max-height: 50vh;
+  height: 100%;
+  width: 100vw;
+}
+.title-portfolio .title-primary {
+  font-family: "comfortaa";
+  font-size: 33px;
+  color: white;
+  margin-left: 0.6rem;
+}
+.title-portfolio .title-secondary {
+  font-family: "comfortaa";
+  font-size: 28px;
+  color: white;
+  margin-left: 0.5rem;
+}
+.card-1 {
+  width: 22vw;
+  height: 20vh;
+  margin-top: 3vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+  color: white;
+}
+.card-1 .card-title,
+.card-1 .card-body {
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-1 .card-body {
+  transform: rotateY(180deg);
+  padding: 1rem;
+  position: relative;
+  bottom: 4rem;
+}
+.card-1:hover {
+  transform: rotateY(180deg);
+}
+.card-1 .card-title {
+  position: relative;
+  top: 4rem;
+}
+.card-1 .card-title h3 {
+  font-family: "comfortaa";
+  font-size: 25px;
+}
+.card-1 .card-title h4 {
+  font-family: "comfortaa";
+  font-size: 20px;
+}
+.card-1 .card-body p {
+  font-family: "poppins";
+  font-size: 17px;
+  text-align: justify;
+}
+.card-2 {
+  height: 20vh;
+  width: 22vw;
+  padding: 1rem;
+  margin-top: 3vh;
+  color: white;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+}
+.card-2 .card-title,
+.card-2 .card-body {
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-2 .card-body {
+  transform: rotateY(180deg);
+  padding: 1rem;
+  position: relative;
+  bottom: 5rem;
+}
+.card-2:hover {
+  transform: rotateY(-180deg);
+}
+.card-2 .card-title {
+  position: relative;
+  top: 2.5rem;
+}
+.card-2 .card-title h3 {
+  font-family: "comfortaa";
+  font-size: 25px;
+}
+.card-2 .card-title h4 {
+  font-family: "comfortaa";
+  font-size: 20px;
+}
+.card-2 .card-body p {
+  font-family: "poppins";
+  font-size: 17px;
+  text-align: justify;
+}
+.card-3 {
+  height: 20vh;
+  width: 22vw;
+  padding: 1rem;
+  color: white;
+  margin-top: 3vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+}
+.card-3 .card-title,
+.card-3 .card-body {
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-3 .card-body {
+  transform: rotateY(180deg);
+  padding: 1rem;
+  position: relative;
+  bottom: 5.1rem;
+}
+.card-3:hover {
+  transform: rotateY(-180deg);
+}
+.card-3 .card-title {
+  position: relative;
+  top: 2.5rem;
+}
+.card-3 .card-title h3 {
+  font-family: "comfortaa";
+  font-size: 25px;
+}
+.card-3 .card-title h4 {
+  font-family: "comfortaa";
+  font-size: 20px;
+}
+.card-3 .card-body p {
+  font-family: "poppins";
+  font-size: 17px;
+  text-align: justify;
+}
+.title-experience {
+  font-family: "comfortaa";
+  color: white;
+  margin-top: 4rem;
+}
+.title-experience h3 {
+  font-size: 33px;
+}
+.title-experience h4 {
+  font-size: 28px;
+}
+.card-2-1 {
+  width: 22vw;
+  height: 25vh;
+  padding: 1rem;
+  margin-top: 3vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+}
+.card-2-1 .card-title,
+.card-2-1 .card-body {
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-2-1 .card-body {
+  transform: rotateX(180deg);
+}
+.card-2-1:hover {
+  transform: rotateX(-180deg);
+}
+.card-2-1 .card-title {
+  font-family: "comfortaa";
+  color: white;
+  position: relative;
+  top: 4rem;
+}
+.card-2-1 .card-title h3 {
+  font-size: 25px;
+}
+.card-2-1 .card-title h4 {
+  font-size: 20px;
+}
+.card-2-1 .card-body p {
+  font-family: "poppins";
+  font-size: 15px;
+  color: white;
+  text-align: justify;
+  padding: 1rem;
+  position: relative;
+  top: 4rem;
+  left: -0.5rem;
+}
+.card-2-2 {
+  width: 22vw;
+  height: 25vh;
+  padding: 1rem;
+  margin-top: 3vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+}
+.card-2-2 .card-title,
+.card-2-2 .card-body {
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-2-2 .card-body {
+  transform: rotateX(180deg);
+}
+.card-2-2:hover {
+  transform: rotateX(-180deg);
+}
+.card-2-2 .card-title {
+  font-family: "comfortaa";
+  color: white;
+  position: relative;
+  top: 4rem;
+}
+.card-2-2 .card-title h3 {
+  font-size: 25px;
+}
+.card-2-2 .card-title h4 {
+  font-size: 20px;
+}
+.card-2-2 .card-body p {
+  font-family: "poppins";
+  font-size: 15px;
+  color: white;
+  text-align: justify;
+  padding: 1rem;
+  position: relative;
+  left: -0.5rem;
+  top: 4rem;
+}
+.card-2-3 {
+  width: 22vw;
+  height: 25vh;
+  padding: 1rem;
+  margin-top: 3vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+  perspective: 20rem;
+}
+.card-2-3 .card-title,
+.card-2-3 .card-body {
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-2-3 .card-body {
+  transform: rotateX(180deg);
+}
+.card-2-3:hover {
+  transform: rotateX(-180deg);
+}
+.card-2-3 .card-title {
+  font-family: "comfortaa";
+  color: white;
+  position: relative;
+  top: 4rem;
+}
+.card-2-3 .card-title h3 {
+  font-size: 25px;
+}
+.card-2-3 .card-title h4 {
+  font-size: 20px;
+}
+.card-2-3 .card-body p {
+  font-family: "poppins";
+  font-size: 15px;
+  color: white;
+  text-align: justify;
+  padding: 1rem;
+  position: relative;
+  top: 5.5rem;
+  left: -0.5rem;
+}
+.title-ability {
+  margin-top: 4rem;
+  font-family: "comfortaa";
+  color: white;
+}
+.title-ability h3 {
+  font-size: 33px;
+}
+.title-ability h4 {
+  font-size: 28px;
+}
+.ability1,
+.ability2,
+.ability3 {
+  position: relative;
+  left: 1rem;
+  color: white;
+  font-family: "poppins";
+}
+.ability4,
+.ability5,
+.ability6 {
+  text-align: end;
+  position: relative;
+  right: 1rem;
+  color: white;
+  font-family: "poppins";
+}
+.ability4-1,
+.ability5-1,
+.ability6-1 {
+  display: none;
+}
+.ability1 p,
+.ability2 p,
+.ability3 p,
+.ability4 p,
+.ability5 p,
+.ability6 p {
+  font-size: 18px;
+}
+.ability4 p,
+.ability5 p,
+.ability6 p {
+  position: relative;
+  top: -1.5rem;
+}
+.fa-star {
+  color: gold;
+}
+.star {
+  position: relative;
+  top: -43px;
+  left: 120px;
+}
+.star2 {
+  position: relative;
+  right: 170px;
+}
+#section3 {
+  position: relative;
+  top: 94vh;
+  height: 20vh;
+  width: 100%;
+}
+.title-contact {
+  font-family: "comfortaa";
+  color: white;
+}
+.title-contact .title-primary {
+  font-size: 33px;
+}
+.title-contact .title-secondary {
+  font-size: 28px;
+}
+.contact-info {
+  margin-top: 3rem;
+  color: white;
+  font-family: "poppins";
+}
+.contact-info p {
+  font-size: 18px;
+}
+.contact-info a {
+  text-decoration: none;
+  color: gray;
+  transition: all 0.3s linear;
+}
+.contact-info a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+.contact {
+  position: relative;
+  top: -3rem;
+  background-color: rgb(100, 100, 100);
+  padding: 20px;
+}
+.contact h3 {
+  font-size: 25px;
+  color: white;
+  font-family: "comfortaa";
+}
+.comment {
+  height: 20vh;
+}
+footer {
+  position: relative;
+  top: 120vh;
+  height: max-content;
+  width: 100vw;
+  padding: 2rem 0;
+}
+.f-1 {
+  color: white;
+  font-family: "comfortaa";
+}
+.f-1 h2 {
+  font-size: 28px;
+}
+.f-1 p {
+  font-size: 18px;
+}
+.f-2 {
+  color: white;
+}
+.f-2 h3 {
+  font-family: "comfortaa";
+  font-size: 28px;
+}
+.f-2 a {
+  text-decoration: none;
+  color: gray;
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+.f-2 a:hover {
+  color: white;
+  margin-left: 10px;
+}
+.f-3 {
+  color: white;
+  font-family: "comfortaa";
+}
+.f-3 h3 {
+  font-size: 28px;
+}
+.f-3 a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.2s linear;
+}
+.f-3 a:hover {
+  color: white;
+  margin-left: 10px;
+}
+footer h5 {
+  color: gray;
+  font-family: "comfortaa";
+  font-size: 15px;
+  margin-top: 3rem;
+  user-select: none;
+}
+
+@media screen and (max-width: 450px) {
+  .nav-lin {
+    display: none;
+  }
+  .title-header .title-primary {
+    font-size: 30px;
+  }
+  .title-header .title-secondary {
+    font-size: 25px;
+  }
+  .title-header .title-primary::after {
+    position: absolute;
+    top: 33px;
+    left: 210px;
+  }
+  @keyframes underlineEffect {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 48%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  .title-header .title-secondary::after {
+    position: absolute;
+    top: 73px;
+    left: 88px;
+  }
+  @keyframes underlineEfek {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 77%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  .title-about {
+    position: relative;
+    top: -1rem;
+  }
+  .title-about .title-primary {
+    font-size: 28px;
+  }
+  .title-about .title-secondary {
+    font-size: 25px;
+  }
+  .description p {
+    font-size: 18px;
+  }
+  .aboutImg {
+    display: none;
+  }
+  .title-portfolio .title-primary {
+    font-size: 28px;
+  }
+  .title-portfolio .title-secondary {
+    font-size: 25px;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    width: 100%;
+  }
+  .title-experience .title-primary {
+    font-size: 28px;
+  }
+  .title-experience .title-secondary {
+    font-size: 25px;
+  }
+  .card-2-1,
+  .card-2-2,
+  .card-2-3 {
+    width: 100%;
+  }
+  .title-ability .title-primary {
+    font-size: 28px;
+  }
+  .title-ability .title-secondary {
+    font-size: 25px;
+  }
+  .ability4,
+  .ability5,
+  .ability6 {
+    display: none;
+  }
+  .ability4-1,
+  .ability5-1,
+  .ability6-1 {
+    display: block;
+    color: white;
+    font-family: "poppins";
+    font-size: 18px;
+    position: relative;
+    left: 1rem;
+  }
+  .star {
+    left: 230px;
+  }
+  .star3 {
+    color: gold;
+    position: relative;
+    top: -45px;
+    left: 230px;
+  }
+  #section3 {
+    position: relative;
+    top: 275vh;
+  }
+  .title-contact .title-primary {
+    font-size: 28px;
+  }
+  .title-contact .title-secondary {
+    font-size: 25px;
+  }
+  .contact-info {
+    position: relative;
+    top: -2rem;
+  }
+  .contact {
+    position: relative;
+    top: 4.5vh;
+  }
+  .contact h3 {
+    font-size: 20px;
+  }
+  footer {
+    position: relative;
+    top: 340vh;
+  }
+  .f-1,
+  .f-2,
+  .f-3 {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 578px) {
+  .nav-lin {
+    display: none;
+  }
+  .title-header .title-primary {
+    font-size: 33px;
+  }
+  .title-header .title-secondary {
+    font-size: 30px;
+  }
+  .title-header .title-primary::after {
+    position: absolute;
+    top: 33px;
+    left: 325px;
+  }
+  .title-header .title-secondary::after {
+    position: absolute;
+    top: 78px;
+    left: 160px;
+  }
+  @keyframes underlineEffect {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 38.5%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  @keyframes underlineEfek {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 66.5%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  .title-about {
+    position: relative;
+    top: -2rem;
+  }
+  .title-about .title-primary {
+    font-size: 30px;
+  }
+  .title-about .title-secondary {
+    font-size: 27px;
+  }
+  .description p {
+    font-size: 18px;
+    position: relative;
+    top: -1rem;
+    right: 0.5rem;
+  }
+  .aboutImg {
+    width: 12rem;
+    position: relative;
+    left: 300px;
+  }
+  #section2 {
+    position: relative;
+    top: 30vh;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    width: 100%;
+  }
+  .title-experience {
+    position: relative;
+    top: 5vh;
+  }
+  .title-experience .title-primary {
+    font-size: 30px;
+  }
+  .title-experience .title-secondary {
+    font-size: 27px;
+  }
+  .card-2-1,
+  .card-2-2,
+  .card-2-3 {
+    width: 100%;
+    position: relative;
+    top: 2rem;
+  }
+  .title-ability .title-primary {
+    font-size: 30px;
+  }
+  .title-ability .title-secondary {
+    font-size: 27px;
+  }
+  #section3 {
+    position: relative;
+    top: 300vh;
+  }
+  .title-contact .title-primary {
+    font-size: 30px;
+  }
+  .title-contact .title-secondary {
+    font-size: 27px;
+  }
+  .contact-info {
+    position: relative;
+    top: -2rem;
+  }
+  .contact {
+    position: relative;
+    top: 4vh;
+    right: 2vw;
+  }
+  .contact h3 {
+    font-size: 20px;
+  }
+  footer {
+    position: relative;
+    top: 365vh;
+  }
+  .f-1,
+  .f-2,
+  .f-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 579px) and (max-width: 767px) {
+  .nav-lin {
+    display: none;
+  }
+  .title-header .title-primary {
+    font-size: 33px;
+  }
+  .title-header .title-secondary {
+    font-size: 30px;
+  }
+  .title-header .title-primary::after {
+    position: absolute;
+    top: 33px;
+    left: 420px;
+  }
+  .title-header .title-secondary::after {
+    position: absolute;
+    top: 78px;
+    left: 252px;
+  }
+  @keyframes underlineEffect {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 29.5%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  @keyframes underlineEfek {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 51.5%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  .title-about {
+    position: relative;
+    top: -2rem;
+  }
+  .title-about .title-primary {
+    font-size: 32px;
+  }
+  .title-about .title-secondary {
+    font-size: 27px;
+  }
+  .description p {
+    font-size: 20px;
+    position: relative;
+    top: -1rem;
+    right: 0.5rem;
+  }
+  .aboutImg {
+    width: 12rem;
+    position: relative;
+    left: 300px;
+  }
+  #section2 {
+    position: relative;
+    top: 30vh;
+  }
+  .title-experience {
+    position: relative;
+    top: 5vh;
+  }
+  .aboutImg {
+    width: 13rem;
+  }
+  .title-portfolio {
+    position: relative;
+    top: 13vh;
+  }
+  .title-portfolio .title-primary {
+    font-size: 32px;
+  }
+  .title-portfolio .title-secondary {
+    font-size: 27px;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    position: relative;
+    top: 13vh;
+    width: 100%;
+  }
+  .title-experience {
+    position: relative;
+    top: 13vh;
+  }
+  .title-experience .title-primary {
+    font-size: 32px;
+  }
+  .title-experience .title-secondary {
+    font-size: 27px;
+  }
+  .card-2-1,
+  .card-2-2,
+  .card-2-3 {
+    width: 100%;
+    position: relative;
+    top: 15vh;
+  }
+  .title-ability {
+    position: relative;
+    top: 15vh;
+  }
+  .title-ability .title-primary {
+    font-size: 32px;
+  }
+  .title-ability .title-secondary {
+    font-size: 27px;
+  }
+  .ability1,
+  .ability2,
+  .ability3,
+  .ability4,
+  .ability5,
+  .ability6 {
+    position: relative;
+    top: 20vh;
+  }
+  #section3 {
+    position: relative;
+    top: 320vh;
+  }
+  .title-contact .title-primary {
+    font-size: 32px;
+  }
+  .title-contact .title-secondary {
+    font-size: 27px;
+  }
+  .contact-info {
+    position: relative;
+    top: -2rem;
+  }
+  .contact {
+    position: relative;
+    top: 4vh;
+    right: 2vw;
+  }
+  .contact h3 {
+    font-size: 20px;
+  }
+  footer {
+    position: relative;
+    top: 380vh;
+  }
+  .f-1,
+  .f-2,
+  .f-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  nav-lin {
+    display: none;
+  }
+  .title-header .title-primary {
+    font-size: 37px;
+  }
+  .title-header .title-secondary {
+    font-size: 33px;
+  }
+  .title-header .title-primary::after {
+    position: absolute;
+    top: 43px;
+    left: 485px;
+  }
+  .title-header .title-secondary::after {
+    position: absolute;
+    top: 90px;
+    left: 308px;
+  }
+  @keyframes underlineEffect {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 32.5%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  @keyframes underlineEfek {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 55.5%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  .title-about .title-primary {
+    font-size: 35px;
+  }
+  .title-about .title-secondary {
+    font-size: 30px;
+  }
+  .description p {
+    font-size: 17px;
+  }
+  .aboutImg {
+    width: 13rem;
+    position: relative;
+    top: 1rem;
+    right: -6.5rem;
+  }
+  .title-portfolio {
+    position: relative;
+    top: 5vh;
+  }
+  .title-portfolio .title-primary {
+    font-size: 35px;
+  }
+  .title-portfolio .title-secondary {
+    font-size: 30px;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    width: 100%;
+    position: relative;
+    top: 3rem;
+  }
+  .title-experience {
+    position: relative;
+    top: 10vh;
+  }
+  .title-experience .title-primary {
+    font-size: 35px;
+  }
+  .title-experience .title-secondary {
+    font-size: 30px;
+  }
+  .card-2-1,
+  .card-2-2
+  {
+    width: 100%;
+    position: relative;
+    top: 5rem;
+  }
+  .card-2-3{
+    width: 100%;
+    position: relative;
+    top: 5rem;
+    left: 22vw;
+  }
+  .card-2-1 .card-body p, .card-2-2 .card-body p, .card-2-3 .card-body p {
+    position: relative;
+    top: 110px;
+  }
+  .title-ability {
+    position: relative;
+    top: 10vh;
+  }
+  .title-ability .title-primary {
+    font-size: 35px;
+  }
+  .title-ability .title-secondary {
+    font-size: 30px;
+  }
+  .ability1,
+  .ability2,
+  .ability3,
+  .ability4,
+  .ability5,
+  .ability6 {
+    position: relative;
+    top: 7rem;
+  }
+  #section3 {
+    position: relative;
+    top: 175vh;
+  }
+  .title-contact .title-primary{
+    font-size: 35px;
+  }
+  .title-contact .title-secondary{
+    font-size: 30px;
+  }
+  footer {
+    position: relative;
+    top: 205vh;
+  }
+}
